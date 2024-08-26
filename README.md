@@ -30,8 +30,8 @@ A comprehensive web application designed to streamline restaurant operations, in
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/OPxMirza/restaurant-management-system.git
-   cd restaurant-management-system
+   git clone https://github.com/OPxMirza/Restaurant-Management-System-using-node-js-and-mongodb.git
+   cd Restaurant-Management-System-using-node-js-and-mongodb
    ```
 
 2. **Install dependencies:**
