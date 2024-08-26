@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Staff</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <div class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/adminPanel">Dashboard</a></li>
+                <li><a href="/reservationHistory">Reservations</a></li>
+                <!-- <li><a href="/inventory">Inventory</a></li> -->
+                <li><a href="/staff" class="active">Staff</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+        <div class="staff-container flex-grow-1">
+            <h1>Edit Staff</h1>
+            <form action="/editStaff/<%= staff._id %>" method="post" class="p-3 border rounded">
+                <div class="form-group">
+                    <label for="editStaffName">Name:</label>
+                    <input type="text" id="editStaffName" name="editStaffName" class="form-control"
+                        value="<%= staff.name %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="staffRole">Role:</label>
+                    <select id="staffRole" name="staffRole" class="form-control" required>
+                        <option value="Manager" <%=staff.role==='Manager' ? 'selected' : '' %>>Manager</option>
+                        <option value="Chef" <%=staff.role==='Chef' ? 'selected' : '' %>>Chef</option>
+                        <option value="Waiter" <%=staff.role==='Waiter' ? 'selected' : '' %>>Waiter</option>
+                        <option value="Bartender" <%=staff.role==='Bartender' ? 'selected' : '' %>>Bartender</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="editStaffSalary">Salary:</label>
+                    <input type="number" id="editStaffSalary" name="editStaffSalary" class="form-control"
+                        value="<%= staff.salary %>" required min="0">
+                </div>
+                <button type="submit" class="btn btn-success">Update Staff</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

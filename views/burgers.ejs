@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <title>Our Burgers</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('partials/header') %>
+
+        <header>
+            <h1>Burger Menu</h1>
+        </header>
+        <main>
+            <div class="burger-container">
+                <div class="burger-item" id="classic-burger">
+                    <img src="/images/burgers/classicBurger.avif" alt="Classic Burger">
+                    <h2>Classic Burger</h2>
+                    <p>$8.99</p>
+                </div>
+                <div class="burger-item" id="cheese-burger">
+                    <img src="/images/burgers/cheeseBurger.jpg" alt="Cheese Burger">
+                    <h2>Cheese Burger</h2>
+                    <p>$9.99</p>
+                </div>
+                <div class="burger-item" id="bacon-burger">
+                    <img src="/images/burgers/baconBurger.jpg" alt="Bacon Burger">
+                    <h2>Bacon Burger</h2>
+                    <p>$10.99</p>
+                </div>
+                <div class="burger-item" id="veggie-burger">
+                    <img src="/images/burgers/veggieBurger.jpg" alt="Veggie Burger">
+                    <h2>Veggie Burger</h2>
+                    <p>$7.99</p>
+                </div>
+                <div class="burger-item" id="mushroom-burger">
+                    <img src="/images/burgers/mushroomBurger.jpg" alt="Mushroom Burger">
+                    <h2>Mushroom Burger</h2>
+                    <p>$8.99</p>
+                </div>
+                <div class="burger-item" id="bbq-burger">
+                    <img src="/images/burgers/bbqBurger.jpeg" alt="BBQ Burger">
+                    <h2>BBQ Burger</h2>
+                    <p>$11.99</p>
+                </div>
+                <div class="burger-item" id="spicyJalapeno-burger">
+                    <img src="/images/burgers/spicyJalapenoBurger.jpg" alt="Spicy Jalapeno Burger">
+                    <h2>Spicy Jalapeno Burger</h2>
+                    <p>$9.99</p>
+                </div>
+                <div class="burger-item" id="chiken-burger">
+                    <img src="/images/burgers/chickenBurger.webp" alt="Chicken Burger">
+                    <h2>Fried Chicken Burger</h2>
+                    <p>$5.99</p>
+                </div>
+                <div class="burger-item" id="avocado-burger">
+                    <img src="/images/burgers/avocadoBurger.jpg" alt="Avocado Burger">
+                    <h2>Avocado Burger</h2>
+                    <p>$7.99</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <%- include('partials/footer') %>
+
+            <script src="/js/script.js"></script>
+</body>
+
+</html>
