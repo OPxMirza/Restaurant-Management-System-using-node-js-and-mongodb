@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <title>Reservation History</title>
+</head>
+
+<body>
+
+    <div class="admin-container">
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        <div class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="/adminPanel">Dashboard</a></li>
+                <li><a href="/reservationHistory" class="active">Reservations</a></li>
+                <!-- <li><a href="/inventory">Inventory</a></li> -->
+                <li><a href="/staff">Staff</a></li>
+                <li><a href="/feedback">Feedback</a></li>
+                <li><a href="/">Logout</a></li>
+            </ul>
+        </div>
+        <div class="reserve-container">
+            <h1 class="text-center">Customer Reservation History</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Customer Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Guests</th>
+                            <th>Special Requests</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% reservations.forEach(reservation=> { %>
+                            <tr>
+                                <td data-label="Reservation ID">
+                                    <%= reservation.reservationId %>
+                                </td>
+                                <td data-label="Customer Name">
+                                    <%= reservation.name %>
+                                </td>
+                                <td data-label="Email">
+                                    <%= reservation.email %>
+                                </td>
+                                <td data-label="Phone">
+                                    <%= reservation.phone %>
+                                </td>
+                                <td data-label="Date">
+                                    <%= reservation.date.toISOString().split('T')[0] %>
+                                </td>
+                                <td data-label="Time">
+                                    <%= reservation.time %>
+                                </td>
+                                <td data-label="Guests">
+                                    <%= reservation.guests %>
+                                </td>
+                                <td data-label="Special Requests">
+                                    <%= reservation.requests %>
+                                </td>
+                                <td data-label="Actions">
+                                    <form action="/edit-reservation/<%= reservation._id %>" method="GET"
+                                        style="display:inline;">
+                                        <button type="submit" class="btn btn-warning"><i class="fas fa-edit"></i>
+                                            Edit</button>
+                                    </form>
+                                    <form action="/delete-reservation/<%= reservation._id %>" method="POST"
+                                        style="display:inline;">
+                                        <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>
+                                            Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <title>Restaurant Hub</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+    <!-- Carousel -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://wallpapercave.com/wp/wp12742317.jpg" class="d-block w-100" alt="Image 1" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>The Unique Ambiance of Our Restaurant</h5>
+            <p>
+              Our restaurant offers a distinctive and inviting atmosphere that
+              immediately puts you at ease. As you step in, you're greeted by
+              warm, ambient lighting and elegant, rustic decor that exudes both
+              comfort and sophistication.
+            </p>
+            <!-- <button type="button" class="btn btn-primary">
+                        <a href="./reserveTable.htm">Book Your Table</a>
+                    </button> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/033/692/644/large_2x/chef-preparing-food-in-the-kitchen-at-the-restaurant-professional-chef-cooking-gourmet-chef-cooking-in-a-commercial-kitchen-ai-generated-free-photo.jpg"
+            class="d-block w-100" alt="Image 2" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Meet Our Chef</h5>
+            <p>
+              Our chef, who has honed their skills through years of experience
+              and rigorous training, embodies the ethos of the professional
+              kitchen, where the title of "chef" is earned with knowledge and
+              experience.
+            </p>
+            <!-- <button class="btn btn-primary">
+                        <a href="./chef.htm">About Chef</a>
+                    </button> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://png.pngtree.com/background/20230610/original/pngtree-restaurants-restaurant-menu-mockup-picture-image_3072506.jpg"
+            class="d-block w-100" alt="Image 3" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Discover Our Culinary Delights</h5>
+            <p>
+              Welcome to Restaurant Hub, where every dish is crafted with
+              passion and precision to tantalize your taste buds. Our menu is a
+              culinary journey through flavors, textures, and aromas, carefully
+              curated to satisfy every palate.
+            </p>
+            <!-- <button class="btn btn-primary">
+                        <a href="./menu.htm">See Menu</a>
+                    </button> -->
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br />
+
+    <marquee class="offer" behavior="scroll" direction="alternate">Exclusive Friday Offer: 10% Off</marquee>
+
+    <!-- Services -->
+
+    <section class="services">
+      <h2 class="service-title">Our Services</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Elegant Ambiance</h3>
+          <p>
+            Our restaurant boasts a beautifully designed interior that creates
+            an elegant ambiance, perfect for both casual dining and special
+            occasions.
+          </p>
+          <!-- <a href="https://www.example.com/reservation-system" class="service-link"></a> -->
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Online Reservations</h3>
+          <p>
+            We make dining convenient through our user-friendly online
+            reservation system, allowing guests to easily book a table at their
+            preferred time.
+          </p>
+          <!-- <a href="./reserveTable.htm" class="service-link">Book your table</a> -->
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3>Social Media Presence</h3>
+          <p>
+            Stay connected with us through our active social media channels
+            where we share the latest updates, promotions.
+          </p>
+          <!-- <a href="https://www.example.com/virtual-tour" class="service-link">Social platforms</a> -->
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Delicious Menu</h3>
+          <p>
+            We offer a diverse menu featuring authentic dishes prepared with the
+            freshest ingredients, capturing the essence of various cuisines.
+          </p>
+          <!-- <a href="./menu.htm" class="service-link">See Menu</a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+      <!-- Font Awesome CDN for icons -->
+      <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>
